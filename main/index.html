@@ -1,320 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>H&M</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/mo.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/mo.css" />
     <script src="./script/jquery-3.6.4.js"></script>
-    <script src="./script/jquery-ui.js"></script>
-    <script>
-        
-            let canvas,rotation;
-            let x = 0, y = 0, r = 0;
-            let mx = 0, my = 0, mr = 0;
-            const speed = 0.08;
-
-            const loop = () =>{
-                mx += (x - mx) * speed;
-                my += (y - my) * speed;
-                mr += (r - mr) * speed;
-                window.requestAnimationFrame(loop);
-            }
-
-            const mouseFunc = (e) =>{
-                x = (e.clientX-window.innerWidth/2), y = (e.clientY-window.innerHeight/2);
-                background.style.transform = `translate3d(${(mx/500)}px, ${(my/500)}px)`;
-                car.style.transform = `translate(${-(mx/2)}px, ${-(my/3)}px) rotateX(${x*0.01}deg) rotateY(${y*0.1}deg)`;
-            }
-            function BodyScrollDisAble(){
-    		    document.body.style.overflow = "hidden"; //스크롤 막음
-    	    };
-            let ww=screen.availWidth;
-            if(ww>979){
-                window.onload = () =>{
-                    BodyScrollDisAble();
-                    car = document.getElementById("rotation");
-                    background = document.getElementById("canvas");
-                    loop();
-                    window.addEventListener("mousemove", mouseFunc);
-                
-                }
-            }else{
-                window.onload = () =>{
-                    BodyScrollDisAble();
-                    car = document.getElementById("rotation");
-                    background = document.getElementById("canvas");
-                    loop();
-                    window.addEventListener("mousemove", mouseFunc);
-                
-                }
-            }
-            
-            // window.addEventListener("touchmousemove", mouseFunc);
-            // $(window).on("touchmove", function (e) {
-            //     e.originalEvent.touches[0].pageX
-            //     e.originalEvent.touches[0].pageY
-            //     e.originalEvent.changedTouches[0].3pageX
-            //     e.originalEvent.changedTouches[0].pageY
-            //     // 둘 다 사용 가능!
-            //     // car = document.getElementById("rotation");
-            //     // background = document.getElementById("canvas");
-            //     // loop();
-            //     // mouseFunc();
-            // })
-        $(document).ready(function(){
-            $(".women_box").hover(function(){
-                event.preventDefault();
-                $('#canvas,#rotation').clearQueue();
-                $(".bg_video_wrap>video").fadeOut()
-                $("#women_video").stop().fadeIn(500)
-
-            },function(){
-                $(".bg_video_wrap>video").fadeOut(500)
-            })
-            $(".man_box").hover(function(){
-                event.preventDefault();
-                $('#canvas,#rotation').clearQueue();
-                $(".bg_video_wrap>video").fadeOut()
-                $("#man_video").stop().fadeIn(500)
-
-            },function(){
-                $(".bg_video_wrap>video").fadeOut(500)
-            })
-            $(".kid_box").hover(function(){
-                event.preventDefault();
-                $('#canvas,#rotation').clearQueue();
-                $(".bg_video_wrap>video").fadeOut()
-                $("#kid_video").stop().fadeIn(500)
-
-            },function(){
-                $(".bg_video_wrap>video").fadeOut(500)
-            })
-            $(".baby_box").hover(function(){
-                event.preventDefault();
-                $('#canvas,#rotation').clearQueue();
-                $(".bg_video_wrap>video").fadeOut()
-                $("#baby_video").stop().fadeIn(500)
-
-            },function(){
-                $(".bg_video_wrap>video").fadeOut(500)
-            })
-            $(".sports_box").hover(function(){
-                event.preventDefault();
-                $('#canvas,#rotation').clearQueue();
-                $(".bg_video_wrap>video").fadeOut()
-                $("#sports_video").stop().fadeIn(500)
-
-            },function(){
-                $(".bg_video_wrap>video").fadeOut(500)
-            })
-            $(".home_box").hover(function(){
-                event.preventDefault();
-                $('#canvas,#rotation').clearQueue();
-                $(".bg_video_wrap>video").fadeOut()
-                $("#home_video").stop().fadeIn(500)
-
-            },function(){
-                $(".bg_video_wrap>video").fadeOut(500)
-            })
-        });//end
-    </script>
-</head>
-<body>
-<div class="pc">
-    <div class="bg_video_wrap">
-        <video id="women_video" src="./video/woman.mp4" autoplay loop muted playsinline></video>
-        <video id="man_video" src="./video/man.mp4" autoplay loop muted playsinline></video>
-        <video id="kid_video" src="./video/kid.mp4" autoplay loop muted playsinline></video>
-        <video id="baby_video" src="./video/baby.mp4" autoplay loop muted playsinline></video>
-        <video id="sports_video" src="./video/sports.mp4" autoplay loop muted playsinline></video>
-        <video id="home_video" src="./video/home.mp4" autoplay loop muted playsinline></video>
-    </div>
-    <div id="canvas">
-        <div id="rotation">
-            
-            <div class="face face_1">
-                <div class="man_box box">
-                    <a href="../sub_page/man.html" class="but man"></a>
-                    <a href="../sub_page/man.html" class="text man_text">Man</a>
-                </div>
-                
-            </div>
-            <div class="face face_2">
-                <div class="women_box box">
-                    <a href="../sub_page/women.html" class="but women"></a>
-                    <a href="../sub_page/women.html" class="text women_text">Women</a>
-                </div>
-                
-            </div>
-            <div class="face face_3">
-                <div class="sports_box box">
-                    <a href="../sub_page/sports.html" class="but sports"></a>
-                    <a href="../sub_page/sports.html" class="text sports_text">Sports</a>
-                </div>
-                
-            </div>
-            <div class="face face_4">
-            </div>
-            <div class="face face_5">
-            </div>
-            <div class="face face_6">
-            </div>
-            <div class="face face_7">
-            </div>
-            <div class="face face_8">
-            </div>
-            <div class="face face_9">
-            </div>
-            <div class="face face_10">
-            </div>
-            <div class="face face_11">
-            </div>
-            <div class="face face_12">
-            </div>
-            <div class="face face_13">
-                <div class="baby_box box">
-                    <a href="../sub_page/baby.html" class="but baby"></a>
-                    <a href="../sub_page/baby.html" class="text baby_text">Baby</a>
-                </div>
-                
-            </div>
-            <div class="face face_14">
-                <div class="kid_box box">
-                    <a href="../sub_page/kid.html" class="but kid"></a>
-                    <a href="../sub_page/kid.html" class="text kid_text">Kid</a>
-                </div>
-                
-            </div>
-            <div class="face face_15">
-                <div class="home_box box">
-                    <a href="../sub_page/home.html" class="but home"></a>
-                    <a href="../sub_page/home.html" class="text home_text">Home</a>
-                </div>
-                
-            </div>
-        
-        </div>
-        
-    </div>
-</div>
-<div class="swiper mySwiper mo">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><video autoplay loop muted playsinline src="./video/mo_woman.mp4"></video>
-        <a href="../sub_page/women.html" class="text_mo">women</a></div>
-      <div class="swiper-slide man"><video autoplay loop muted playsinline src="./video/mo_man.mp4"></video>
-        <a href="../sub_page/man.html" class="text_mo">Man</a></div>
-      <div class="swiper-slide"><video autoplay loop muted playsinline src="./video/mo_kid.mp4"></video>
-        <a href="../sub_page/kid.html" class="text_mo">Kid</a></div>
-      <div class="swiper-slide"><video autoplay loop muted playsinline src="./video/mo_baby.mp4"></video>
-        <a href="../sub_page/baby.html" class="text_mo">Baby</a>
-      </div>
-      <div class="swiper-slide"><video autoplay loop muted playsinline src="./video/mo_sports.mp4"></video>
-        <a href="../sub_page/sports.html" class="text_mo">Sports</a></div>
-      <div class="swiper-slide"><video autoplay loop muted playsinline src="./video/mo_home.mp4"></video>
-        <a href="../sub_page/home.html" class="text_mo">Home</a></div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        grabCursor: true,
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ["100%", 0, 0],
-          },
-        },
-      });
-      var swiper2 = new Swiper(".mySwiper2", {
-        grabCursor: true,
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: ["-120%", 0, -500],
-          },
-          next: {
-            shadow: true,
-            translate: ["120%", 0, -500],
-          },
-        },
-      });
-      var swiper3 = new Swiper(".mySwiper3", {
-        grabCursor: true,
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: ["-20%", 0, -1],
-          },
-          next: {
-            translate: ["100%", 0, 0],
-          },
-        },
-      });
-      var swiper4 = new Swiper(".mySwiper4", {
-        grabCursor: true,
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: [0, 0, -800],
-            rotate: [180, 0, 0],
-          },
-          next: {
-            shadow: true,
-            translate: [0, 0, -800],
-            rotate: [-180, 0, 0],
-          },
-        },
-      });
-      var swiper5 = new Swiper(".mySwiper5", {
-        grabCursor: true,
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: ["-125%", 0, -800],
-            rotate: [0, 0, -90],
-          },
-          next: {
-            shadow: true,
-            translate: ["125%", 0, -800],
-            rotate: [0, 0, 90],
-          },
-        },
-      });
-      var swiper6 = new Swiper(".mySwiper6", {
-        grabCursor: true,
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            origin: "left center",
-            translate: ["-5%", 0, -200],
-            rotate: [0, 100, 0],
-          },
-          next: {
-            origin: "right center",
-            translate: ["5%", 0, -200],
-            rotate: [0, -100, 0],
-          },
-        },
-      });
-    </script>
-  </div>
-    <div class="logo">
-        <img src="./img/h&m-logo.png" alt="logo">
+    <script src="./script/main.js"></script>
+  </head>
+  <body>
+    <div class="pc">
+      <div class="bg_video_wrap">
+        <video
+          id="women_video"
+          src="./video/woman.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <video
+          id="man_video"
+          src="./video/man.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <video
+          id="kid_video"
+          src="./video/kid.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <video
+          id="baby_video"
+          src="./video/baby.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <video
+          id="sports_video"
+          src="./video/sports.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <video
+          id="home_video"
+          src="./video/home.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+      </div>
+      <div id="canvas">
+        <div id="rotation">
+          <div class="face face_1">
+            <div class="man_box box">
+              <a href="../sub_page/man.html" class="but man"></a>
+              <a href="../sub_page/man.html" class="text man_text">Man</a>
+            </div>
+          </div>
+          <div class="face face_2">
+            <div class="women_box box">
+              <a href="../sub_page/women.html" class="but women"></a>
+              <a href="../sub_page/women.html" class="text women_text">Women</a>
+            </div>
+          </div>
+          <div class="face face_3">
+            <div class="sports_box box">
+              <a href="../sub_page/sports.html" class="but sports"></a>
+              <a href="../sub_page/sports.html" class="text sports_text"
+                >Sports</a
+              >
+            </div>
+          </div>
+          <div class="face face_4"></div>
+          <div class="face face_5"></div>
+          <div class="face face_6"></div>
+          <div class="face face_7"></div>
+          <div class="face face_8"></div>
+          <div class="face face_9"></div>
+          <div class="face face_10"></div>
+          <div class="face face_11"></div>
+          <div class="face face_12"></div>
+          <div class="face face_13">
+            <div class="baby_box box">
+              <a href="../sub_page/baby.html" class="but baby"></a>
+              <a href="../sub_page/baby.html" class="text baby_text">Baby</a>
+            </div>
+          </div>
+          <div class="face face_14">
+            <div class="kid_box box">
+              <a href="../sub_page/kid.html" class="but kid"></a>
+              <a href="../sub_page/kid.html" class="text kid_text">Kid</a>
+            </div>
+          </div>
+          <div class="face face_15">
+            <div class="home_box box">
+              <a href="../sub_page/home.html" class="but home"></a>
+              <a href="../sub_page/home.html" class="text home_text">Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+    <div class="swiper mySwiper mo">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="./video/mo_woman.mp4"
+          ></video>
+          <a href="../sub_page/women.html" class="text_mo">women</a>
+        </div>
+        <div class="swiper-slide man">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="./video/mo_man.mp4"
+          ></video>
+          <a href="../sub_page/man.html" class="text_mo">Man</a>
+        </div>
+        <div class="swiper-slide">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="./video/mo_kid.mp4"
+          ></video>
+          <a href="../sub_page/kid.html" class="text_mo">Kid</a>
+        </div>
+        <div class="swiper-slide">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="./video/mo_baby.mp4"
+          ></video>
+          <a href="../sub_page/baby.html" class="text_mo">Baby</a>
+        </div>
+        <div class="swiper-slide">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="./video/mo_sports.mp4"
+          ></video>
+          <a href="../sub_page/sports.html" class="text_mo">Sports</a>
+        </div>
+        <div class="swiper-slide">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="./video/mo_home.mp4"
+          ></video>
+          <a href="../sub_page/home.html" class="text_mo">Home</a>
+        </div>
+      </div>
+    </div>
+    <div class="logo">
+      <img src="./img/h&m-logo.png" alt="logo" />
+    </div>
+  </body>
 </html>
