@@ -1,108 +1,150 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>H&M</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta
+      name="description"
+      content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels."
+    />
+    <meta
+      name="keywords"
+      content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited"
+    />
+    <meta name="Resource-type" content="Document" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/jquery.multiscroll.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/examples.css" />
+    <link
+      rel="stylesheet"
+      href="./css/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/sub.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./script/jquery.multiscroll.js"
+    ></script>
+    <script src="./script/sub.js"></script>
+  </head>
+  <body>
+    <div class="pc">
+      <a href="../index.html" target="_self" class="logo">
+        <img src="./img/h&m-logo.png" alt="" />
+      </a>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
-	<title>H&M</title>
-	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
-	<meta name="keywords"  content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
-	<meta name="Resource-type" content="Document" />
-	<link rel="stylesheet" type="text/css" href="./css/jquery.multiscroll.css" />		
-	<link rel="stylesheet" type="text/css" href="./css/examples.css" />		
-	<link rel="stylesheet" href="./css/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css" />
-	<link rel="stylesheet" href="./css/sub.css">
-	<script
-	src="https://code.jquery.com/jquery-3.6.0.min.js"
-	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-	crossorigin="anonymous"></script>
-	<script type="text/javascript" src="./script/jquery.multiscroll.js"></script>
-	<script src="./script/sub.js"></script>
-	
-</head>
-<body>
-<div class="pc">
-	<a href="../main/index.html" target="_self" class="logo">
-		<img src="./img/h&m-logo.png" alt="">
-	</a>
+      <div id="myContainer">
+        <div class="ms-left">
+          <div class="ms-section" id="left1">
+            <img src="./img/man_img/m_1_l.jpg" alt="" />
+          </div>
 
-	<div id="myContainer">
+          <div class="ms-section" id="left2">
+            <img src="./img/man_img/m_2_l.jpg" alt="" />
+            <a
+              href="https://www2.hm.com/ko_kr/men/seasonal-trending/summer.html"
+              target="_blank"
+              class="but"
+              >Shop now</a
+            >
+          </div>
 
-		<div class="ms-left">
-			<div class="ms-section" id="left1">
-				<img src="./img/man_img/m_1_l.jpg" alt="">
-			</div>
+          <div class="ms-section" id="left3">
+            <img src="./img/man_img/m_3_l.jpg" alt="" />
+          </div>
+        </div>
 
-			<div class="ms-section" id="left2">
-				<img src="./img/man_img/m_2_l.jpg" alt="">
-				<a href="https://www2.hm.com/ko_kr/men/seasonal-trending/summer.html" target="_blank" class="but">Shop now</a>
-			</div>
+        <div class="ms-right">
+          <div class="ms-section" id="right1">
+            <img src="./img/man_img/m_1_r.jpg" alt="" />
+            <a
+              href="https://www2.hm.com/ko_kr/men/new-arrivals/view-all.html"
+              target="_blank"
+              class="but"
+              >Shop now</a
+            >
+          </div>
 
-			<div class="ms-section" id="left3">
-				<img src="./img/man_img/m_3_l.jpg" alt="">
-			</div>
-		</div>
-		
-		<div class="ms-right">
-			<div class="ms-section" id="right1">
-				<img src="./img/man_img/m_1_r.jpg" alt="">
-				<a href="https://www2.hm.com/ko_kr/men/new-arrivals/view-all.html" target="_blank" class="but">Shop now</a>
-			</div>
+          <div class="ms-section" id="right2">
+            <img src="./img/man_img/m_2_r.jpg" alt="" />
+          </div>
 
-			<div class="ms-section" id="right2">
-				<img src="./img/man_img/m_2_r.jpg" alt="">
-			</div>
+          <div class="ms-section" id="right3">
+            <img src="./img/man_img/m_3_r.jpg" alt="" />
+            <a
+              href="https://www2.hm.com/ko_kr/men/shop-by-product/shirts-and-tanks/polo.html"
+              target="_blank"
+              class="but"
+              >Shop now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mo">
+      <div class="swiper mySwiper">
+        <a href="../main/index.html" target="_self" class="logo_mo">
+          <img src="./img/h&m-logo.png" alt="" />
+        </a>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img_box">
+              <img src="./img/mo_img/m_mo_1.jpg" alt="" />
+            </div>
+            <a
+              href="https://www2.hm.com/ko_kr/men/new-arrivals/view-all.html"
+              target="_blank"
+              class="but"
+              >Shop now</a
+            >
+          </div>
+          <div class="swiper-slide">
+            <div class="img_box">
+              <img src="./img/mo_img/m_mo_2.jpg" alt="" />
+            </div>
+            <a
+              href="https://www2.hm.com/ko_kr/men/seasonal-trending/summer.html"
+              target="_blank"
+              class="but"
+              >Shop now</a
+            >
+          </div>
+          <div class="swiper-slide">
+            <div class="img_box">
+              <img src="./img/mo_img/m_mo_3.jpg" alt="" />
+            </div>
+            <a
+              href="https://www2.hm.com/ko_kr/men/shop-by-product/shirts-and-tanks/polo.html"
+              target="_blank"
+              class="but"
+              >Shop now</a
+            >
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
 
-			<div class="ms-section" id="right3">
-				<img src="./img/man_img/m_3_r.jpg" alt="">
-				<a href="https://www2.hm.com/ko_kr/men/shop-by-product/shirts-and-tanks/polo.html" target="_blank" class="but">Shop now</a>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="mo">
-	<div class="swiper mySwiper">
-		<a href="../main/index.html" target="_self" class="logo_mo">
-			<img src="./img/h&m-logo.png" alt="">
-			
-		</a>
-		<div class="swiper-wrapper">
-		  <div class="swiper-slide">
-			<div class="img_box">
-				<img src="./img/mo_img/m_mo_1.jpg" alt="" >
-			</div>
-			<a href="https://www2.hm.com/ko_kr/men/new-arrivals/view-all.html" target="_blank" class="but">Shop now</a>
-		  </div>
-		  <div class="swiper-slide">
-			<div class="img_box">
-				<img src="./img/mo_img/m_mo_2.jpg" alt="" >
-			</div>
-			<a href="https://www2.hm.com/ko_kr/men/seasonal-trending/summer.html" target="_blank" class="but">Shop now</a>
-		</div>
-		  <div class="swiper-slide">
-			<div class="img_box">
-				<img src="./img/mo_img/m_mo_3.jpg" alt="" >
-			</div>
-			<a href="https://www2.hm.com/ko_kr/men/shop-by-product/shirts-and-tanks/polo.html" target="_blank" class="but">Shop now</a>
-		  </div>
-		</div>
-		<div class="swiper-pagination"></div>
-	  </div>
-	
-	  <!-- Swiper JS -->
-	  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-	
-	  <!-- Initialize Swiper -->
-	  <script>
-		var swiper = new Swiper(".mySwiper", {
-		  spaceBetween: 30,
-		  pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-		  },
-		});
-	  </script>
-</div>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-</body>
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper('.mySwiper', {
+          spaceBetween: 30,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        });
+      </script>
+    </div>
+  </body>
 </html>
