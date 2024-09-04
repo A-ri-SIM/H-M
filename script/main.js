@@ -29,20 +29,13 @@ let ww = screen.availWidth;
 if (ww > 979) {
   window.onload = () => {
     BodyScrollDisAble();
-    car = document.getElementById('rotation');
-    background = document.getElementById('canvas');
-    loop();
-    window.addEventListener('mousemove', mouseFunc);
-  };
-} else {
-  window.onload = () => {
-    BodyScrollDisAble();
-    car = document.getElementById('rotation');
-    background = document.getElementById('canvas');
+    car = document.querySelector('#rotation');
+    background = document.querySelector('#canvas');
     loop();
     window.addEventListener('mousemove', mouseFunc);
   };
 }
+
 $(document).ready(function () {
   $('.women_box').hover(
     function () {
